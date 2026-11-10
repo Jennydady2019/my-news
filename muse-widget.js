@@ -17,7 +17,7 @@ let data = null
 let fromCache = false
 try {
   const req = new Request(DATA_URL)
-  req.timeoutInterval = 10
+  req.timeoutInterval = 30
   data = await req.loadJSON()
   fm.writeString(cachePath, JSON.stringify(data))
 } catch (e) {
